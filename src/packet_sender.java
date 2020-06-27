@@ -261,8 +261,14 @@ public class packet_sender {
 		if (text.equals("bye"))
 		    System.out.println("Disconnected from Server");
 		// writer.println(result);
-
-		writer.println(sendCode);
+		if (!text.equals("CorruptedCode")) {		    
+		    writer.println(sendCode);
+		} else {
+		    sendCode = headerTos() + totalLengtHex(20, hexBytenum(result)) + iDField() + ofst() + ttltcpProtocol()
+			+ cksum + sourceIp + destinationIp + result;
+		    sendCode = packetSectioning(sendCode);
+		    writer.println(sendCode);
+		}
 
 	    } while (!text.equals("bye"));
 

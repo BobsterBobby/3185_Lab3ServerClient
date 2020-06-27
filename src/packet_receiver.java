@@ -134,7 +134,9 @@ public class packet_receiver {
 			writer.println("Server reply: " + decodedText + "\n");
 
 		    } else {
-			writer.println("welp");
+			
+			System.out.println("The verification of the checksum demonstrates that the packet received is corrupted. Packet discarded!");
+			writer.println("The verification of the checksum demonstrates that the packet received is corrupted. Packet discarded!");
 
 		    }
 

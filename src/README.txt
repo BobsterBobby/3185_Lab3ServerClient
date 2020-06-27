@@ -17,7 +17,7 @@ Second Step:
 	Go to each directories on two different Command Prompt where you put the two files and run:
 			>java packet_receiver 9090			(Server)
 		then
-			>java packet_sender localhost 9090	(Client)
+			>java packet_sender localhost 9090		(Client)
 
 Third Step:
 	In the packet_sender Command Prompt Enter Transmitted Value. i.e.:

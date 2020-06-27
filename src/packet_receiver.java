@@ -126,16 +126,16 @@ public class packet_receiver {
 			    decodedText = decodedText + ch;
 			}
 
-			System.out.println("decode complete\n--> " + decodedText);
+			System.out.println("decode complete\n--> " + decodedText + "\n");
 			if (decodedText.equals("bye")) {
-			    System.out.println("Client disconnected");
+			    System.out.println("Client disconnected\n");
 			    break;
 			}
-			writer.println("Server reply: " + decodedText + "\n");
+			writer.println("Server reply: " + decodedText);
 
 		    } else {
 			
-			System.out.println("The verification of the checksum demonstrates that the packet received is corrupted. Packet discarded!");
+			System.out.println("The verification of the checksum demonstrates that the packet received is corrupted. Packet discarded!\n");
 			writer.println("The verification of the checksum demonstrates that the packet received is corrupted. Packet discarded!");
 
 		    }

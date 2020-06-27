@@ -225,7 +225,7 @@ public class packet_sender {
 
 		System.out.println(time);
 
-		text = console.readLine("Enter text: ");
+		text = console.readLine("\nEnter text: ");
 
 		char ch[] = text.toCharArray();
 		StringBuffer sb = new StringBuffer();
